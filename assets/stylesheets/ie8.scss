@@ -1,0 +1,43 @@
+.pagination-container {
+  .pagination {
+    a {
+      &:hover {
+        filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+      }
+      &.selected {
+        filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+      }
+    }
+  }
+}
+
+.slider {
+  .text-block {
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=76);
+  }
+}
+
+.gallery {
+  .small-images-list {
+    li {
+      .small-img {
+        filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+      }
+    }
+  }
+}
+
+.large-gallery {
+  .large-gallery-container {
+    a {
+      img {
+        filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+      }
+    }
+    &.active {
+      img {
+        filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+      }
+    }
+  }
+}

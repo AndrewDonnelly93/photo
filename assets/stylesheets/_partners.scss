@@ -1,0 +1,184 @@
+$partners-wrapper: 1260px;
+$partners-list-first-h: 171px;
+$partners-list-second-h: 181px;
+$partners-list-third-h: 201px;
+$partners-list-first-item-w: 260px;
+$partners-list-second-item-w: 300px;
+$partners-list-third-item-w: 210px;
+$partners-list-fourth-item-w: 300px;
+
+.partners {
+  padding-top: 115px;
+  padding-bottom: 249px;
+  .big-header {
+    margin-bottom: 150px;
+  }
+  .block-wrapper {
+    width: $partners-wrapper;
+  }
+  .partners-list {
+    list-style: none;
+    li {
+      display: inline-block;
+      position: relative;
+      &:first-child {
+        width: $partners-list-first-item-w;
+        a {
+          width: $partners-list-first-item-w;
+        }
+        margin-right: 77px;
+      }
+      &:nth-child(2) {
+        width: $partners-list-second-item-w;
+        a {
+          width: $partners-list-second-item-w;
+        }
+        margin-right: 57px;
+      }
+      &:nth-child(3) {
+        width: $partners-list-third-item-w;
+        a {
+          width: $partners-list-third-item-w;
+        }
+        margin-right: 54px;
+      }
+      &:nth-child(4) {
+        width: $partners-list-fourth-item-w;
+        a {
+          width: $partners-list-fourth-item-w;
+        }
+      }
+      &:before {
+        @extend %full-size-pseudo;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+      &.slimtech {
+        &:before {
+          top: -49px;
+          left: -3px;
+          background-image: url("../images/partners/slimtech.png");
+          -webkit-background-size: 213px 44px;
+          background-size: 213px 44px;
+        }
+      }
+      &.pmi {
+        &:before {
+          top: -24px;
+          left: 35px;
+          background-image: url("../images/partners/pml.png");
+          -webkit-background-size: 220px 65px;
+          background-size: 220px 65px;
+        }
+      }
+      &.gallery {
+        &:before {
+          background-image: url("../images/partners/gallery.png");
+          -webkit-background-size: 234px 236px;
+          background-size: 234px 236px;
+        }
+      }
+      &.comedy {
+        &:before {
+          top: -43px;
+          left: -9px;
+          background-image: url("../images/partners/comedy.png");
+          -webkit-background-size: 232px 97px;
+          background-size: 232px 97px;
+        }
+      }
+      &.lamoda {
+        &:before {
+          left: 5px;
+          background-image: url("../images/partners/lamoda.png");
+          -webkit-background-size: 188px 46px;
+          background-size: 188px 46px;
+        }
+      }
+      &.yug {
+        &:before {
+          top: 6px;
+          left: 25px;
+          background-image: url("../images/partners/jugru.png");
+          -webkit-background-size: 206px 75px;
+          background-size: 206px 75px;
+        }
+      }
+      &.ginza {
+        &:before {
+          top: 10px;
+          left: -8px;
+          background-image: url("../images/partners/ginza.png");
+          -webkit-background-size: 194px 138px;
+          background-size: 194px 138px;
+        }
+      }
+      &.invasion {
+        &:before {
+          top: -4px;
+          left: -11px;
+          background-image: url("../images/partners/invasion.png");
+          -webkit-background-size: 259px 89px;
+          background-size: 259px 89px;
+        }
+      }
+      &.backstage {
+        &:before {
+          top: -27px;
+          left: -1px;
+          background-image: url("../images/partners/backstage.png");
+          -webkit-background-size: 238px 170px;
+          background-size: 238px 170px;
+        }
+      }
+      &.almazova {
+        &:before {
+          background-image: url("../images/partners/almazova.png");
+          -webkit-background-size: 221px 97px;
+          background-size: 221px 97px;
+        }
+      }
+      &.nova-arena {
+        &:before {
+          top: 2px;
+          left: 15px;
+          background-image: url("../images/partners/nova-arena.png");
+          -webkit-background-size: 370px 187px;
+          background-size: 370px 187px;
+        }
+      }
+      &.krznt {
+        &:before {
+          top: -26px;
+          left: 19px;
+          background-image: url("../images/partners/krznt.png");
+          -webkit-background-size: 184px 127px;
+          background-size: 184px 127px;
+        }
+      }
+    }
+    a {
+      display: block;
+      position: relative;
+    }
+    &.first {
+      height: $partners-list-first-h;
+      li, a {
+        height: $partners-list-first-h;
+      }
+      margin-bottom: 54px;
+    }
+    &.second {
+      height: $partners-list-second-h;
+      li, a {
+        height: $partners-list-second-h;
+      }
+    }
+    &.third {
+      height: $partners-list-third-h;
+      li, a {
+        height: $partners-list-third-h;
+      }
+    }
+  }
+}

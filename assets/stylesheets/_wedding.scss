@@ -1,0 +1,62 @@
+.wedding {
+  position: relative;
+  padding-top: 71px;
+  padding-bottom: 100px;
+  .block-wrapper {
+    width: $middle-screen-wrapper;
+  }
+  .section-description {
+    margin: 0 auto;
+    width: 876px;
+    .big-header {
+      margin-bottom: 69px;
+    }
+  }
+  .gallery {
+    margin: 70px auto 0;
+  }
+  .offer {
+    .btn {
+      margin-top: 41px;
+      display: inline-block;
+    }
+  }
+  @media (min-width: $middle-screen) {
+    &:before {
+      position: absolute;
+      height: 1px;
+      width: 569px;
+      background: #000;
+      top: 135px;
+      right: -135px;
+      content: "";
+    }
+    .big-header {
+      text-align: left;
+      span {
+        display: block;
+        padding-left: 25px;
+      }
+    }
+    .block-wrapper {
+      width: 1680px;
+    }
+    .section-description {
+      margin: 0;
+      float: right;
+      .big-header {
+        @include border-box;
+        padding-left: 20px;
+      }
+    }
+    .articles {
+      @include border-box;
+      padding-left: 82px;
+    }
+    .gallery {
+      margin: 70px 0 0 0;
+      float: left;
+    }
+    padding-bottom: 300px;
+  }
+}

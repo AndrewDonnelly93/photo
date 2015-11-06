@@ -1,0 +1,39 @@
+$geo-image-w: 40px;
+$geo-image-h: 62px;
+
+.geolocation {
+  text-align: center;
+  padding-top: 123px;
+  padding-bottom: 149px;
+  .big-header {
+    margin-bottom: 114px;
+  }
+  .geo {
+    list-style: none;
+    vertical-align: top;
+    display: inline-block;
+    max-width: 280px;
+    margin-right: 77px;
+    &:last-child {
+      margin-right: 0;
+    }
+    .geo-image {
+      margin: 0 auto 32px;
+      @include size($geo-image-w,$geo-image-h);
+      background: url("../images/sprite/geo.png") 0 0 no-repeat;
+    }
+    .geo-description {
+      line-height: 1.2;
+      font: {
+        family: "Garamond", sans-serif;
+        size: 22px;
+      }
+      color: #000;
+      span {
+        font: {
+          family: "Garamond-Italic", sans-serif;
+        }
+      }
+    }
+  }
+}

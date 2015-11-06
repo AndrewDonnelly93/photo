@@ -1,0 +1,125 @@
+$input-w: 561px;
+$input-h: 61px;
+$textarea-h: 160px;
+$social-item-size: 50px;
+
+footer {
+  padding-top: 130px;
+  padding-bottom: 165px;
+  background: #000;
+  color: #fff;
+  .block-wrapper {
+    width: $middle-screen-wrapper;
+  }
+  .big-header {
+    color: #fff;
+    margin-bottom: 143px;
+  }
+  .send-contacts {
+    width: $input-w;
+    float: left;
+    input[type=text] {
+      font: {
+        family: "Circe-Regular", sans-serif;
+        size: 22px;
+      }
+      background: $base;
+      @include size($input-w,$input-h);
+      line-height: normal;
+      @include border-box;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-bottom: 50px;
+      color: $gray;
+      @include placeholder($gray);
+    }
+    textarea {
+      font: {
+        family: "Circe-Regular", sans-serif;
+        size: 22px;
+      }
+      color: $gray;
+      background: $base;
+      @include placeholder($gray);
+      width: $input-w;
+      height: $textarea-h;
+      @include border-box;
+      padding: 14px 20px;
+      margin-bottom: 40px;
+      line-height: 1.2;
+    }
+    input[type=submit] {
+      color: $base;
+      background: #000;
+      @include size($input-w,$input-h);
+      @include border-box;
+      text-align: center;
+      border: 2px solid $base;
+      font: {
+        family: "Circe-Bold", sans-serif !important;
+        size: 30px;
+      }
+      &:hover {
+        background: $base;
+        color: #000;
+      }
+    }
+  }
+  .contacts {
+    float: right;
+    width: $logo-w;
+    text-align: center;
+    .line {
+      @include size(100%,1px);
+      background: $base;
+    }
+    .logo {
+      @include size($logo-w,$logo-h);
+      background: url("../images/logo.png") 0 0 no-repeat;
+      margin-bottom: 50px;
+    }
+    .phone {
+      margin-top: 60px;
+      font-size: 30px;
+      margin-bottom: 60px;
+    }
+    .email {
+      font-size: 30px;
+      margin-bottom: 60px;
+    }
+    .social-list {
+      margin-bottom: 77px;
+      li {
+        display: inline-block;
+        margin-right: 30px;
+        @include size($social-item-size,$social-item-size);
+        &:last-child {
+          margin-right: 0;
+        }
+        .social-btn {
+          display: block;
+          @include size($social-item-size,$social-item-size);
+          &.vk {
+            background: url("../images/sprite/vk.png") no-repeat 0 0;
+          }
+          &.fb {
+            background: url("../images/sprite/fb.png") no-repeat 0 0;
+          }
+          &.inst {
+            background: url("../images/sprite/inst.png") no-repeat 0 0;
+          }
+        }
+      }
+    }
+    .subscribe {
+      margin-top: 70px;
+      font: {
+        family: "Garamond", sans-serif;
+        size: 22px;
+      }
+      a {
+        color: $base;
+      }
+    }
+  }
+}

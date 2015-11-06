@@ -1,0 +1,115 @@
+$slider-width: 1903px;
+$slider-height: 1080px;
+$pagination-height: 15px;
+$pagination-width: 15px;
+$logo-w: 454px;
+$logo-h: 44px;
+$slider-text-block-w: 600px;
+$slider-wrapper-w: 1560px;
+
+
+.slider {
+  position: relative;
+  display: block;
+  width: $slider-width;
+  max-width: $slider-width !important;
+  height: $slider-height;
+  margin: 0 auto;
+  .slider-wrapper {
+    position: relative;
+    width: $slider-wrapper-w;
+    @media (max-width: $middle-screen) {
+      width: $middle-screen-wrapper;
+    }
+    margin: 0 auto;
+  }
+  .item {
+    @include border-box;
+    padding-top: 122px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $slider-width;
+    max-width: $slider-width !important;
+    height: $slider-height;
+    text-align: center;
+    .slider-img-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: $slider-height;
+    }
+    .slider-img {
+      display: block;
+      margin: 0 auto;
+      width: $slider-width;
+      height: $slider-height;
+      @media (max-width: 1919px) {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        margin-left: -1/2 * $slider-width;
+      }
+    }
+  }
+  .contacts {
+    .logo {
+      float: left;
+      @include size($logo-w,$logo-h);
+      background: url("../images/logo.png") 0 0 no-repeat;
+    }
+    .phone {
+      position: relative;
+      top: -5px;
+      float: right;
+      font-size: 40px;
+    }
+    margin-bottom: 327px;
+  }
+  .text-block {
+    text-align: left;
+    display: block;
+    float: left;
+    font-size: 48px;
+    line-height: 1.25;
+    opacity: .76;
+    max-width: $slider-text-block-w;
+  }
+}
+
+.pagination-container {
+  width: 100%;
+  position: absolute;
+  height: $pagination-height;
+  z-index: 11;
+  bottom: 120px;
+  left: 0;
+  text-align: center;
+  .pagination {
+    display: inline-block;
+    a {
+      display: block;
+      position: relative;
+      z-index: 11;
+      text-indent: -9999px;
+      float: left;
+      margin-right: 60px;
+      &:last-child {
+        margin-right: 0;
+      }
+      width: $pagination-width;
+      height: $pagination-height;
+      @include border-radius(50%);
+      @include border-box;
+      border: 1px solid $base;
+      &:hover {
+        opacity: .7;
+        background: $base;
+      }
+      &.selected {
+        opacity: .7;
+        background: $base;
+      }
+    }
+  }}

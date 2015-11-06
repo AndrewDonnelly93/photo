@@ -1,0 +1,51 @@
+.others {
+  padding-top: 150px;
+  padding-bottom: 160px;
+  .block-wrapper {
+    width: $middle-screen-wrapper;
+  }
+  .articles {
+    float: right;
+    width: 460px;
+    .offer {
+      width: 460px;
+    }
+    .btn {
+      margin-top: 58px;
+    }
+  }
+  .gallery {
+    float: left;
+  }
+  .big-header {
+    margin-top: 70px;
+    text-align: left;
+    span {
+      display: block;
+    }
+    margin-bottom: 50px;
+  }
+  @media (min-width: $middle-screen) {
+    &:before {
+      position: absolute;
+      height: 1px;
+      width: 569px;
+      background: #000;
+      top: 135px;
+      right: -135px;
+      content: "";
+    }
+    padding-bottom: 397px;
+    .block-wrapper {
+      width: 1400px;
+    }
+    .gallery {
+      .big-img-container {
+        .bg {
+          right: -100px;
+          top: 369px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+$large-gallery-thumb-h: 58px;
+
+.large-gallery {
+  width: 100%;
+  @include border-box;
+  overflow-x: hidden;
+  padding: 69px 75px;
+  background: #000;
+  .large-gallery-container {
+    width: 100%;
+    overflow: hidden;
+    a {
+      display: inline-block;
+      margin-right: 5px;
+      img {
+        opacity: .5;
+        display: block;
+        height: $large-gallery-thumb-h;
+        width: auto;
+        max-width: 100%;
+      }
+    }
+    &.active {
+      img {
+        opacity: 1;
+      }
+    }
+  }
+}
