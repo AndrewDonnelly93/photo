@@ -503,6 +503,12 @@ body {
     width: 759px;
     position: relative;
     text-align: center; }
+    .gallery .small-images-container:hover {
+      cursor: -webkit-grab;
+      cursor: -moz-grab;
+      cursor: -o-grab;
+      cursor: -ms-grab;
+      cursor: grab; }
   .gallery .small-images-list {
     width: 759px;
     height: 69px;
@@ -512,16 +518,14 @@ body {
       height: 69px;
       display: inline-block;
       margin-right: 5px; }
-      .gallery .small-images-list li:last-child {
-        margin-right: 0; }
       .gallery .small-images-list li .small-img {
         display: block;
         height: 69px;
         width: auto;
         max-width: 100%;
-        opacity: .5; }
-        .gallery .small-images-list li .small-img.active {
-          opacity: 1; }
+        opacity: .5 !important; }
+        .gallery .small-images-list li .small-img.current {
+          opacity: 1 !important; }
         .gallery .small-images-list li .small-img:hover {
           cursor: pointer; }
 

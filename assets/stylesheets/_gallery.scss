@@ -40,6 +40,13 @@ $small-img-h: 69px;
     position: relative;
     // display: table;
     text-align: center;
+    &:hover {
+      cursor: -webkit-grab;
+      cursor: -moz-grab;
+      cursor: -o-grab;
+      cursor: -ms-grab;
+      cursor: grab;
+    }
   }
   .small-images-list {
     width: $big-img-w;
@@ -51,18 +58,15 @@ $small-img-h: 69px;
       height: $small-img-h;
       display: inline-block;
       margin-right: 5px;
-      &:last-child {
-        margin-right: 0;
-      }
       // display: table-cell;
       .small-img {
         display: block;
         height: $small-img-h;
         width: auto;
         max-width: 100%;
-        opacity: .5;
-        &.active {
-          opacity: 1;
+        opacity: .5 !important;
+        &.current {
+          opacity: 1 !important;
         }
         &:hover {
           cursor: pointer;

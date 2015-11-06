@@ -102,6 +102,9 @@
   display: none;
 }
 .owl-carousel .owl-item {
+  height: 69px;
+  width: auto !important;
+  margin-right: 5px !important;
   position: relative;
   min-height: 1px;
   float: left;
