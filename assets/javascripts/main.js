@@ -59,6 +59,18 @@ function openGallery() {
   });
 }
 
+function openLightGallery() {
+  $(document).on("click", ".big-img", function () {
+    var $this = $(this);
+    var imgRefString = $this.attr("src");
+    $this.parents(".gallery").find(".small-img").each(function() {
+      if ($(this).attr("src") == imgRefString) {
+        $(this).click();
+      }
+    });
+  });
+}
+
 $(function () {
 
   if ($(".fancybox").length) {
@@ -86,6 +98,7 @@ $(function () {
 
 
   if ($(".owl-carousel").length) {
+    openLightGallery();
     var owl = $(".owl-carousel");
     owl.each(function () {
       var $this = $(this);

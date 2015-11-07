@@ -516,6 +516,8 @@ section {
       z-index: 5;
       width: 759px;
       height: 502px; }
+      .gallery .big-img-container .big-img:hover {
+        cursor: pointer; }
       .gallery .big-img-container .big-img.vertical {
         width: auto;
         height: 502px; }

@@ -27,6 +27,9 @@ $small-img-h: 69px;
       }
     }
     .big-img {
+      &:hover {
+        cursor: pointer;
+      }
       position: relative;
       z-index: 5;
       width: $big-img-w;
