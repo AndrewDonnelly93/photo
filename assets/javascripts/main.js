@@ -42,11 +42,7 @@ function owlGallery($this) {
 
 function addActiveToImage($this) {
   $(".small-img").removeClass("current");
-  //if ($this === ".small-img") {
   $this.addClass("current");
-  //} else {
-  //$this.find(".small-img").addClass("current");
-  //}
   var imgRefString = $this.attr("src");
   $this.parents(".gallery").find(".big-img").attr("src", imgRefString);
   if ($this.hasClass("vertical")) {
@@ -61,21 +57,6 @@ function openGallery() {
     var $this = $(this);
     addActiveToImage($this);
   });
-}
-
-function getLastCurrentSlide(currentSlide) {
-  // console.log(currentSlide);
-  // var photoName = "big"; //photoName contains "big" and number, for ex. big11
-//  var photoNameLastSymPosition = $this.lastIndexOf(photoName) + photoName.length;
-  //var currentSlideNumber = $this.slice(photoNameLastSymPosition);
-  //currentSlideNumber = currentSlideNumber.slice(0,currentSlideNumber.lastIndexOf("."));
-
-  // var currentSlideNumber = currentSlide.index();
-//  e.preventDefault();
-  //console.log(currentSlideNumber);
-  //carousel.to(carousel.relative($this.index()));
-  // addActiveToImage($(currentSlide));
-  return currentSlide.index() + 1;
 }
 
 $(function () {
@@ -100,30 +81,37 @@ $(function () {
       thumbnail: true,
       thumbMargin: 5,
       autoplay: true
-      //showThumbByDefault: true
     });
   }
+
 
   if ($(".owl-carousel").length) {
     var owl = $(".owl-carousel");
     owl.each(function () {
       var $this = $(this);
-      $this.owlCarousel({
-        margin: 5,
-        autoplay: true,
-        autoplaySpeed: 1000,
-        autoWidth: true,
-        stopOnHover: true,
-        autoplayHoverPause: true,
-        loop: true,
-        items: 10
-      })
+        $this.owlCarousel({
+          margin: 5,
+          autoplay: true,
+          autoplaySpeed: 1000,
+          autoWidth: true,
+          stopOnHover: true,
+          autoplayHoverPause: true,
+          loop: true,
+          items: 10
+        })
         .on("changed.owl.carousel", function () {
           owlGallery($this);
         })
-        .hover(function () {
-          openGallery();
+        .lightGallery({
+          thumbnail: true,
+          thumbMargin: 5,
+          autoplay: true
         });
+      $this.parents(".gallery").hover(function () {
+        $this.trigger("stop.owl.autoplay");
+      }, function () {
+        $this.trigger("play.owl.autoplay");
+      });
     });
   }
 });
