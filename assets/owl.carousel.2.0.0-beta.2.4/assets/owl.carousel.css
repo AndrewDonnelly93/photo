@@ -60,6 +60,7 @@
   z-index: 1;
 }
 .owl-carousel .owl-stage {
+  height: 69px;
   position: relative;
   -ms-touch-action: pan-Y;
 }
@@ -72,6 +73,7 @@
   height: 0;
 }
 .owl-carousel .owl-stage-outer {
+  height: 69px;
   position: relative;
   overflow: hidden;
   /* fix for flashing background */

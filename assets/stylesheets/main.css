@@ -529,9 +529,6 @@ body {
         .gallery .small-images-list li .small-img:hover {
           cursor: pointer; }
 
-.report .gallery .small-images-list li .small-img {
-  height: 70px; }
-
 .wedding {
   position: relative;
   padding-top: 71px;
