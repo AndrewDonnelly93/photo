@@ -43,7 +43,7 @@ body {
 
 .big-header {
   font: {
-    family: Didona, sans-serif;
+    family: Didona, "Circe-Bold", sans-serif;
     size: 75px;
   }
   color: #000;
@@ -138,22 +138,23 @@ body {
         position: absolute;
         top: -10px;
         left: 0;
+        background: url("../images/sprite/sprite.png") 0 0 no-repeat;
         &.one {
           @include size($number-w - 2,$number-h);
-          background: url("../images/sprite/img1.png") 0 0 no-repeat;
+          background-position: 0 0;
         }
         &.two {
-          background: url("../images/sprite/img2.png") 0 0 no-repeat;
+          background-position: 0 -44px;
         }
         &.three {
-          background: url("../images/sprite/img3.png") 0 0 no-repeat;
+          background-position: 0 -89px;
         }
         &.four {
           @include size($number-w + 1,$number-h);
-          background: url("../images/sprite/img4.png") 0 0 no-repeat;
+          background-position: 0 -134px;
         }
         &.five {
-          background: url("../images/sprite/img5.png") 0 0 no-repeat;
+          background-position: 0 -179px;
         }
       }
 
@@ -173,13 +174,17 @@ body {
         }
         color: #000;
       }
-  background: url("../images/bg.png") center 0 no-repeat;
+  background: url("../images/bg.png") center 0 no-repeat $gray;
   @media (max-width: 1528px) {
     background-image: url("../images/small-bg.png");
     .advantages-table {
       margin-right: 50px;
     }
   }
+}
+
+section {
+  overflow-x: hidden;
 }
 
 .section-description {

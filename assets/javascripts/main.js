@@ -97,11 +97,11 @@ $(function () {
           stopOnHover: true,
           autoplayHoverPause: true,
           loop: true,
-          items: 10
+          items: 8
         })
-        .on("changed.owl.carousel", function () {
-          owlGallery($this);
-        })
+          .on("changed.owl.carousel", function () {
+        owlGallery($this);
+      })
         .lightGallery({
           thumbnail: true,
           thumbMargin: 5,
@@ -112,6 +112,30 @@ $(function () {
       }, function () {
         $this.trigger("play.owl.autoplay");
       });
+    });
+    var bottomOwl = $("#owl-carousel");
+    bottomOwl.owlCarousel({
+      margin: 5,
+      autoplay: true,
+      autoplaySpeed: 1000,
+      autoWidth: true,
+      stopOnHover: true,
+      autoplayHoverPause: true,
+      loop: true,
+      items: 20
+    })
+      .on("changed.owl.carousel", function () {
+        owlGallery(bottomOwl);
+      })
+      .lightGallery({
+        thumbnail: true,
+        thumbMargin: 5,
+        autoplay: true
+      });
+    bottomOwl.parents(".large-gallery").hover(function () {
+      bottomOwl.trigger("stop.owl.autoplay");
+    }, function () {
+      bottomOwl.trigger("play.owl.autoplay");
     });
   }
 });

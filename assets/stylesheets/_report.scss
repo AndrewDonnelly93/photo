@@ -1,6 +1,7 @@
 .report {
   padding-top: 150px;
   padding-bottom: 150px;
+  position: relative;
   .block-wrapper {
     width: $middle-screen-wrapper;
   }
@@ -23,6 +24,15 @@
     margin-bottom: 50px;
   }
   @media (min-width: $middle-screen) {
+    &:before {
+      position: absolute;
+      height: 1px;
+      width: 84px;
+      background: #000;
+      top: 245px;
+      left: 0;
+      content: "";
+    }
     padding-bottom: 397px;
     .block-wrapper {
       width: 1478px;

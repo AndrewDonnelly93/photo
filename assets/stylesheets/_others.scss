@@ -1,6 +1,7 @@
 .others {
   padding-top: 150px;
   padding-bottom: 160px;
+  position: relative;
   .block-wrapper {
     width: $middle-screen-wrapper;
   }
@@ -18,7 +19,7 @@
     float: left;
   }
   .big-header {
-    margin-top: 70px;
+    margin-top: 20px;
     text-align: left;
     span {
       display: block;
@@ -31,8 +32,8 @@
       height: 1px;
       width: 569px;
       background: #000;
-      top: 135px;
-      right: -135px;
+      top: 235px;
+      right: 0;
       content: "";
     }
     padding-bottom: 397px;
@@ -42,8 +43,9 @@
     .gallery {
       .big-img-container {
         .bg {
-          right: -100px;
-          top: 369px;
+          width: 1000px;
+          left: -120px;
+          top: 33px;
         }
       }
     }

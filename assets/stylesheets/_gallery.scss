@@ -10,7 +10,8 @@ $small-img-h: 69px;
     height: $big-img-h;
     margin-bottom: 7px;
     position: relative;
-    .bg {
+    .bg,
+    .second-bg {
       position: absolute;
       height: 1px;
       width: 950px;
@@ -20,7 +21,8 @@ $small-img-h: 69px;
       display: none;
     }
     @media (min-width: $middle-screen) {
-      .bg {
+      .bg,
+      .second-bg {
         display: block;
       }
     }
@@ -70,18 +72,6 @@ $small-img-h: 69px;
         }
         &:hover {
           cursor: pointer;
-        }
-      }
-    }
-  }
-}
-
-.report {
-  .gallery {
-    .small-images-list {
-      li {
-        .small-img {
-         // height: $small-img-h + 1;
         }
       }
     }

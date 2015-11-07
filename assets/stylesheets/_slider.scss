@@ -15,6 +15,7 @@ $slider-wrapper-w: 1560px;
   max-width: $slider-width !important;
   height: $slider-height;
   margin: 0 auto;
+  background: $gray;
   .slider-wrapper {
     position: relative;
     width: $slider-wrapper-w;

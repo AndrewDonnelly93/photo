@@ -8,21 +8,24 @@ $large-gallery-thumb-h: 58px;
   background: #000;
   .large-gallery-container {
     width: 100%;
+    height: $large-gallery-thumb-h;
     overflow: hidden;
-    a {
+    list-style: none;
+    li {
       display: inline-block;
       margin-right: 5px;
-      img {
+      .small-img {
         opacity: .5;
         display: block;
         height: $large-gallery-thumb-h;
         width: auto;
         max-width: 100%;
-      }
-    }
-    &.active {
-      img {
-        opacity: 1;
+        &.current {
+          opacity: 1 !important;
+        }
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
   }

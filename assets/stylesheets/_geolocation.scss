@@ -20,7 +20,7 @@ $geo-image-h: 62px;
     .geo-image {
       margin: 0 auto 32px;
       @include size($geo-image-w,$geo-image-h);
-      background: url("../images/sprite/geo.png") 0 0 no-repeat;
+      background: url("../images/sprite/sprite.png") 0 -380px no-repeat;
     }
     .geo-description {
       line-height: 1.2;

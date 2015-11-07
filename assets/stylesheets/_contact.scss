@@ -13,12 +13,13 @@ footer {
   }
   .big-header {
     color: #fff;
-    margin-bottom: 143px;
+    margin-bottom: 129px;
   }
   .send-contacts {
     width: $input-w;
     float: left;
-    input[type=text] {
+    input[type=text],
+    input[type=email] {
       font: {
         family: "Circe-Regular", sans-serif;
         size: 22px;
@@ -79,16 +80,16 @@ footer {
       margin-bottom: 50px;
     }
     .phone {
-      margin-top: 60px;
+      margin-top: 50px;
       font-size: 30px;
-      margin-bottom: 60px;
+      margin-bottom: 40px;
     }
     .email {
       font-size: 30px;
-      margin-bottom: 60px;
+      margin-bottom: 57px;
     }
     .social-list {
-      margin-bottom: 77px;
+      margin-bottom: 65px;
       li {
         display: inline-block;
         margin-right: 30px;
@@ -98,21 +99,22 @@ footer {
         }
         .social-btn {
           display: block;
+          background: url("../images/sprite/sprite.png") no-repeat 0 0;
           @include size($social-item-size,$social-item-size);
           &.vk {
-            background: url("../images/sprite/vk.png") no-repeat 0 0;
+            background-position: 0 -328px;
           }
           &.fb {
-            background: url("../images/sprite/fb.png") no-repeat 0 0;
+            background-position: 0 -224px;
           }
           &.inst {
-            background: url("../images/sprite/inst.png") no-repeat 0 0;
+            background-position: 0 -276px;
           }
         }
       }
     }
     .subscribe {
-      margin-top: 70px;
+      margin-top: 55px;
       font: {
         family: "Garamond", sans-serif;
         size: 22px;

@@ -1,6 +1,7 @@
 .photoset {
   padding-top: 50px;
   padding-bottom: 150px;
+  position: relative;
   .block-wrapper {
     width: $middle-screen-wrapper;
   }
@@ -30,10 +31,10 @@
     &:before {
       position: absolute;
       height: 1px;
-      width: 569px;
+      width: 119px;
       background: #000;
       top: 135px;
-      right: -135px;
+      left: 0;
       content: "";
     }
     .block-wrapper {
@@ -42,19 +43,14 @@
     .gallery {
       .big-img-container {
         .bg {
-          right: -100px;
-          top: 369px;
-          &:before {
-            &:before {
-              position: absolute;
-              height: 1px;
-              width: 569px;
-              background: #000;
-              top: 135px;
-              right: -135px;
-              content: "";
-            }
-          }
+          right: -200px;
+          width: 660px;
+          top: 360px;
+        }
+        .second-bg {
+          top: 169px;
+          width: 660px;
+          left: -272px;
         }
       }
     }

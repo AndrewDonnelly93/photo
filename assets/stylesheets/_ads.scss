@@ -43,15 +43,6 @@
       top: 171px;
       right: -50px;
       position: relative;
-      &:before {
-        position: absolute;
-        height: 1px;
-        width: 569px;
-        background: #000;
-        top: 135px;
-        right: -135px;
-        content: "";
-      }
     }
     .big-header {
       text-align: left;

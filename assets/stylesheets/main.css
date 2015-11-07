@@ -62,6 +62,21 @@ textarea:-webkit-autofill:active {
   color: #444 !important;
   -webkit-text-fill-color: #444 !important; }
 
+button {
+  border: 0;
+  outline: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline-width: 0;
+  background: 0; }
+
+input:focus {
+  outline-width: 0; }
+
+input {
+  outline: 0;
+  outline-width: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
 .clearfix:after {
   display: table;
   content: '';
@@ -96,7 +111,7 @@ body {
   position: relative; }
 
 .big-header {
-  font-family: Didona, sans-serif;
+  font-family: Didona, "Circe-Bold", sans-serif;
   font-size: 75px;
   color: #000; }
 
@@ -126,7 +141,7 @@ body {
       background: url("../images/sprite/img3.png") 0 0 no-repeat;
     }
   }*/
-  background: url("../images/bg.png") center 0 no-repeat; }
+  background: url("../images/bg.png") center 0 no-repeat #444444; }
   .about-me .block-wrapper {
     width: 1520px; }
   .about-me .header-container {
@@ -173,21 +188,22 @@ body {
     height: 41px;
     position: absolute;
     top: -10px;
-    left: 0; }
+    left: 0;
+    background: url("../images/sprite/sprite.png") 0 0 no-repeat; }
     .about-me .number.one {
       width: 43px;
       height: 41px;
-      background: url("../images/sprite/img1.png") 0 0 no-repeat; }
+      background-position: 0 0; }
     .about-me .number.two {
-      background: url("../images/sprite/img2.png") 0 0 no-repeat; }
+      background-position: 0 -44px; }
     .about-me .number.three {
-      background: url("../images/sprite/img3.png") 0 0 no-repeat; }
+      background-position: 0 -89px; }
     .about-me .number.four {
       width: 46px;
       height: 41px;
-      background: url("../images/sprite/img4.png") 0 0 no-repeat; }
+      background-position: 0 -134px; }
     .about-me .number.five {
-      background: url("../images/sprite/img5.png") 0 0 no-repeat; }
+      background-position: 0 -179px; }
   .about-me .advantage-name {
     line-height: 1.2;
     font-family: 'Circe-Bold';
@@ -203,6 +219,9 @@ body {
       background-image: url("../images/small-bg.png"); }
       .about-me .advantages-table {
         margin-right: 50px; } }
+
+section {
+  overflow-x: hidden; }
 
 .section-description .articles .offer {
   text-align: left;
@@ -261,7 +280,8 @@ body {
   width: 1903px;
   max-width: 1903px !important;
   height: 1080px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  background: #444444; }
   .slider .slider-wrapper {
     position: relative;
     width: 1560px;
@@ -480,7 +500,8 @@ body {
     height: 502px;
     margin-bottom: 7px;
     position: relative; }
-    .gallery .big-img-container .bg {
+    .gallery .big-img-container .bg,
+    .gallery .big-img-container .second-bg {
       position: absolute;
       height: 1px;
       width: 950px;
@@ -489,7 +510,8 @@ body {
       right: -50px;
       display: none; }
     @media (min-width: 1700px) {
-      .gallery .big-img-container .bg {
+      .gallery .big-img-container .bg,
+      .gallery .big-img-container .second-bg {
         display: block; } }
     .gallery .big-img-container .big-img {
       position: relative;
@@ -582,7 +604,8 @@ body {
 
 .report {
   padding-top: 150px;
-  padding-bottom: 150px; }
+  padding-bottom: 150px;
+  position: relative; }
   .report .block-wrapper {
     width: 1240px; }
   .report .articles {
@@ -601,6 +624,14 @@ body {
   @media (min-width: 1700px) {
     .report {
       padding-bottom: 397px; }
+      .report:before {
+        position: absolute;
+        height: 1px;
+        width: 84px;
+        background: #000;
+        top: 245px;
+        left: 0;
+        content: ""; }
       .report .block-wrapper {
         width: 1478px; }
       .report .gallery .big-img-container .bg {
@@ -642,14 +673,6 @@ body {
         top: 171px;
         right: -50px;
         position: relative; }
-        .ads .bg:before {
-          position: absolute;
-          height: 1px;
-          width: 569px;
-          background: #000;
-          top: 135px;
-          right: -135px;
-          content: ""; }
       .ads .big-header {
         text-align: left; }
         .ads .big-header span {
@@ -676,7 +699,8 @@ body {
 
 .photoset {
   padding-top: 50px;
-  padding-bottom: 150px; }
+  padding-bottom: 150px;
+  position: relative; }
   .photoset .block-wrapper {
     width: 1240px; }
   .photoset .articles {
@@ -700,28 +724,26 @@ body {
       .photoset:before {
         position: absolute;
         height: 1px;
-        width: 569px;
+        width: 119px;
         background: #000;
         top: 135px;
-        right: -135px;
+        left: 0;
         content: ""; }
       .photoset .block-wrapper {
         width: 1478px; }
       .photoset .gallery .big-img-container .bg {
-        right: -100px;
-        top: 369px; }
-        .photoset .gallery .big-img-container .bg:before:before {
-          position: absolute;
-          height: 1px;
-          width: 569px;
-          background: #000;
-          top: 135px;
-          right: -135px;
-          content: ""; } }
+        right: -200px;
+        width: 660px;
+        top: 360px; }
+      .photoset .gallery .big-img-container .second-bg {
+        top: 169px;
+        width: 660px;
+        left: -272px; } }
 
 .others {
   padding-top: 150px;
-  padding-bottom: 160px; }
+  padding-bottom: 160px;
+  position: relative; }
   .others .block-wrapper {
     width: 1240px; }
   .others .articles {
@@ -734,7 +756,7 @@ body {
   .others .gallery {
     float: left; }
   .others .big-header {
-    margin-top: 70px;
+    margin-top: 20px;
     text-align: left;
     margin-bottom: 50px; }
     .others .big-header span {
@@ -747,14 +769,15 @@ body {
         height: 1px;
         width: 569px;
         background: #000;
-        top: 135px;
-        right: -135px;
+        top: 235px;
+        right: 0;
         content: ""; }
       .others .block-wrapper {
         width: 1400px; }
       .others .gallery .big-img-container .bg {
-        right: -100px;
-        top: 369px; } }
+        width: 1000px;
+        left: -120px;
+        top: 33px; } }
 
 .large-gallery {
   width: 100%;
@@ -766,18 +789,22 @@ body {
   background: #000; }
   .large-gallery .large-gallery-container {
     width: 100%;
-    overflow: hidden; }
-    .large-gallery .large-gallery-container a {
+    height: 58px;
+    overflow: hidden;
+    list-style: none; }
+    .large-gallery .large-gallery-container li {
       display: inline-block;
       margin-right: 5px; }
-      .large-gallery .large-gallery-container a img {
+      .large-gallery .large-gallery-container li .small-img {
         opacity: .5;
         display: block;
         height: 58px;
         width: auto;
         max-width: 100%; }
-    .large-gallery .large-gallery-container.active img {
-      opacity: 1; }
+        .large-gallery .large-gallery-container li .small-img.current {
+          opacity: 1 !important; }
+        .large-gallery .large-gallery-container li .small-img:hover {
+          cursor: pointer; }
 
 .geolocation {
   text-align: center;
@@ -797,7 +824,7 @@ body {
       margin: 0 auto 32px;
       width: 40px;
       height: 62px;
-      background: url("../images/sprite/geo.png") 0 0 no-repeat; }
+      background: url("../images/sprite/sprite.png") 0 -380px no-repeat; }
     .geolocation .geo .geo-description {
       line-height: 1.2;
       font-family: "Garamond", sans-serif;
@@ -815,11 +842,12 @@ footer {
     width: 1240px; }
   footer .big-header {
     color: #fff;
-    margin-bottom: 143px; }
+    margin-bottom: 129px; }
   footer .send-contacts {
     width: 561px;
     float: left; }
-    footer .send-contacts input[type=text] {
+    footer .send-contacts input[type=text],
+    footer .send-contacts input[type=email] {
       font-family: "Circe-Regular", sans-serif;
       font-size: 22px;
       background: white;
@@ -833,11 +861,14 @@ footer {
       padding-right: 20px;
       margin-bottom: 50px;
       color: #444444; }
-      footer .send-contacts input[type=text] :-webkit-input-placeholder {
+      footer .send-contacts input[type=text] :-webkit-input-placeholder,
+      footer .send-contacts input[type=email] :-webkit-input-placeholder {
         color: #444444; }
-      footer .send-contacts input[type=text] :-moz-placeholder {
+      footer .send-contacts input[type=text] :-moz-placeholder,
+      footer .send-contacts input[type=email] :-moz-placeholder {
         color: #444444; }
-      footer .send-contacts input[type=text] :-ms-input-placeholder {
+      footer .send-contacts input[type=text] :-ms-input-placeholder,
+      footer .send-contacts input[type=email] :-ms-input-placeholder {
         color: #444444; }
     footer .send-contacts textarea {
       font-family: "Circe-Regular", sans-serif;
@@ -887,14 +918,14 @@ footer {
       background: url("../images/logo.png") 0 0 no-repeat;
       margin-bottom: 50px; }
     footer .contacts .phone {
-      margin-top: 60px;
+      margin-top: 50px;
       font-size: 30px;
-      margin-bottom: 60px; }
+      margin-bottom: 40px; }
     footer .contacts .email {
       font-size: 30px;
-      margin-bottom: 60px; }
+      margin-bottom: 57px; }
     footer .contacts .social-list {
-      margin-bottom: 77px; }
+      margin-bottom: 65px; }
       footer .contacts .social-list li {
         display: inline-block;
         margin-right: 30px;
@@ -904,16 +935,17 @@ footer {
           margin-right: 0; }
         footer .contacts .social-list li .social-btn {
           display: block;
+          background: url("../images/sprite/sprite.png") no-repeat 0 0;
           width: 50px;
           height: 50px; }
           footer .contacts .social-list li .social-btn.vk {
-            background: url("../images/sprite/vk.png") no-repeat 0 0; }
+            background-position: 0 -328px; }
           footer .contacts .social-list li .social-btn.fb {
-            background: url("../images/sprite/fb.png") no-repeat 0 0; }
+            background-position: 0 -224px; }
           footer .contacts .social-list li .social-btn.inst {
-            background: url("../images/sprite/inst.png") no-repeat 0 0; }
+            background-position: 0 -276px; }
     footer .contacts .subscribe {
-      margin-top: 70px;
+      margin-top: 55px;
       font-family: "Garamond", sans-serif;
       font-size: 22px; }
       footer .contacts .subscribe a {
