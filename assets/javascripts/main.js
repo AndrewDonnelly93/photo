@@ -30,7 +30,11 @@ function sliderInitialise() {
 
 function owlGallery($this) {
   $this.find(".owl-item.active").find(".small-img").removeClass("current");
-  var $thisImageRef = $this.find(".owl-item.active").eq(1).find(".small-img").addClass("current");
+  var $thisImageRef = $this.find(".owl-item.active").eq(1).find(".small-img");
+  $thisImageRef.addClass("current");
+  if ($thisImageRef.height() > $thisImageRef.width()) {
+    $thisImageRef.addClass("vertical");
+  }
   var imgRefString = $thisImageRef.attr("src");
   $thisImageRef.parents(".gallery").find(".big-img").attr("src", imgRefString);
   if ($thisImageRef.hasClass("vertical")) {
@@ -51,6 +55,19 @@ function addActiveToImage($this) {
     $this.parents(".gallery").find(".big-img").removeClass("vertical");
   }
 }
+
+$('a[href*=#]:not([href=#])').click(function() {
+  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    if (target.length) {
+      $('html,body').animate({
+        scrollTop: target.offset().top
+      }, 1000);
+      return false;
+    }
+  }
+});
 
 function openGallery() {
   $(document).on("click", ".small-img", function () {
@@ -116,7 +133,7 @@ $(function () {
         owlGallery($this);
       })
         .lightGallery({
-          thumbnail: true,
+          thumbnail: false,
           thumbMargin: 5,
           autoplay: true
         });
@@ -141,7 +158,7 @@ $(function () {
         owlGallery(bottomOwl);
       })
       .lightGallery({
-        thumbnail: true,
+        thumbnail: false,
         thumbMargin: 5,
         autoplay: true
       });

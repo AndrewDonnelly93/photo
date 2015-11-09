@@ -5,7 +5,6 @@
   src: url("../fonts/circe/Circe-Light.eot") format("embedded-opentype"), url("../fonts/circe/Circe-Light.woff") format("woff"), url("../fonts/circe/Circe-Light.ttf") format("truetype"), url("../fonts/circe/Circe-Light.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'Circe-Regular';
   src: url("../fonts/circe/Circe-Regular.eot") format("embedded-opentype");
@@ -13,7 +12,6 @@
   src: url("../fonts/circe/Circe-Regular.eot") format("embedded-opentype"), url("../fonts/circe/Circe-Regular.woff") format("woff"), url("../fonts/circe/Circe-Regular.ttf") format("truetype"), url("../fonts/circe/Circe-Regular.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'Circe-Bold';
   src: url("../fonts/circe/Circe-Bold.eot") format("embedded-opentype");
@@ -21,14 +19,19 @@
   src: url("../fonts/circe/Circe-Bold.eot") format("embedded-opentype"), url("../fonts/circe/Circe-Bold.woff") format("woff"), url("../fonts/circe/Circe-Bold.ttf") format("truetype"), url("../fonts/circe/Circe-Bold.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'didonaregular';
   src: url("../fonts/didona/didona_allfont.ru-webfont.eot");
   src: url("../fonts/didona/didona_allfont.ru-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/didona/didona_allfont.ru-webfont.woff2") format("woff2"), url("../fonts/didona/didona_allfont.ru-webfont.woff") format("woff"), url("../fonts/didona/didona_allfont.ru-webfont.ttf") format("truetype"), url("../fonts/didona/didona_allfont.ru-webfont.svg#didonaregular") format("svg");
   font-weight: normal;
   font-style: normal; }
-
+@font-face {
+  font-family: 'didona';
+  src: url("../fonts/didona/Didona.eot") format("embedded-opentype");
+  src: url("../fonts/didona/Didona.eot");
+  src: url("../fonts/didona/Didona.eot") format("embedded-opentype"), url("../fonts/didona/Didona.woff") format("woff"), url("../fonts/didona/Didona.ttf") format("truetype"), url("../fonts/didona/Didona.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 @font-face {
   font-family: 'Garamond';
   src: url("../fonts/garamond/Garamond.eot") format("embedded-opentype");
@@ -36,7 +39,6 @@
   src: url("../fonts/garamond/Garamond.eot") format("embedded-opentype"), url("../fonts/garamond/Garamond.woff") format("woff"), url("../fonts/garamond/Garamond.ttf") format("truetype"), url("../fonts/garamond/Garamond.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'Garamond-Italic';
   src: url("../fonts/garamond/Garamond-Italic.eot") format("embedded-opentype");
@@ -44,7 +46,6 @@
   src: url("../fonts/garamond/Garamond-Italic.eot") format("embedded-opentype"), url("../fonts/garamond/Garamond-Italic.woff") format("woff"), url("../fonts/garamond/Garamond-Italic.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -63,7 +64,7 @@ textarea:-webkit-autofill:active {
 button {
   border: 0;
   outline: 0;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   outline-width: 0;
   background: 0; }
 
@@ -73,7 +74,7 @@ input:focus {
 input {
   outline: 0;
   outline-width: 0;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  -webkit-tap-highlight-color: transparent; }
 
 .clearfix:after {
   display: table;
@@ -94,11 +95,11 @@ input {
 
 body {
   width: 100%;
-  min-width: 1024px;
+  min-width: 1280px;
   font-family: "Circe-Regular", sans-serif;
   font-size: 18px;
   text-align: center;
-  color: white;
+  color: #fff;
   overflow-x: hidden; }
 
 .slider-section {
@@ -109,7 +110,7 @@ body {
   position: relative; }
 
 .big-header {
-  font-family: "didona", sans-serif;
+  font-family: "didona", "didonaregular", sans-serif;
   font-size: 75px;
   color: #000; }
 
@@ -362,15 +363,15 @@ section {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
-      border: 1px solid white; }
+      border: 1px solid #fff; }
       .pagination-container .pagination a:last-child {
         margin-right: 0; }
       .pagination-container .pagination a:hover {
         opacity: .7;
-        background: white; }
+        background: #fff; }
       .pagination-container .pagination a.selected {
         opacity: .7;
-        background: white; }
+        background: #fff; }
 
 .partners {
   padding-top: 115px;
@@ -627,9 +628,9 @@ section {
       .report:before {
         position: absolute;
         height: 1px;
-        width: 84px;
+        width: 319px;
         background: #000;
-        top: 245px;
+        top: 225px;
         left: 0;
         content: ""; }
       .report .block-wrapper {
@@ -724,9 +725,9 @@ section {
       .photoset:before {
         position: absolute;
         height: 1px;
-        width: 119px;
+        width: 319px;
         background: #000;
-        top: 135px;
+        top: 125px;
         left: 0;
         content: ""; }
       .photoset .block-wrapper {
@@ -769,7 +770,7 @@ section {
         height: 1px;
         width: 569px;
         background: #000;
-        top: 235px;
+        top: 245px;
         right: 0;
         content: ""; }
       .others .block-wrapper {
@@ -850,7 +851,7 @@ footer {
     footer .send-contacts input[type=email] {
       font-family: "Circe-Regular", sans-serif;
       font-size: 22px;
-      background: white;
+      background: #fff;
       width: 561px;
       height: 61px;
       line-height: normal;
@@ -874,7 +875,7 @@ footer {
       font-family: "Circe-Regular", sans-serif;
       font-size: 22px;
       color: #444444;
-      background: white;
+      background: #fff;
       width: 561px;
       height: 160px;
       -webkit-box-sizing: border-box;
@@ -890,7 +891,7 @@ footer {
       footer .send-contacts textarea :-ms-input-placeholder {
         color: #444444; }
     footer .send-contacts input[type=submit] {
-      color: white;
+      color: #fff;
       background: #000;
       width: 561px;
       height: 61px;
@@ -898,11 +899,11 @@ footer {
       -moz-box-sizing: border-box;
       box-sizing: border-box;
       text-align: center;
-      border: 2px solid white;
+      border: 2px solid #fff;
       font-family: "Circe-Bold", sans-serif !important;
       font-size: 30px; }
       footer .send-contacts input[type=submit]:hover {
-        background: white;
+        background: #fff;
         color: #000; }
   footer .contacts {
     float: right;
@@ -911,7 +912,7 @@ footer {
     footer .contacts .line {
       width: 100%;
       height: 1px;
-      background: white; }
+      background: #fff; }
     footer .contacts .logo {
       width: 454px;
       height: 44px;
@@ -949,4 +950,6 @@ footer {
       font-family: "Garamond", sans-serif;
       font-size: 22px; }
       footer .contacts .subscribe a {
-        color: white; }
+        color: #fff; }
+
+/*# sourceMappingURL=main.css.map */

@@ -22,7 +22,7 @@ $gray: rgb(68, 68, 68);
 
 body {
   width: 100%;
-  min-width: $screen-1024;
+  min-width: $middle-screen-wrapper + 40;
   font: {
     family: "Circe-Regular", sans-serif;
     size: 18px;
@@ -43,7 +43,7 @@ body {
 
 .big-header {
   font: {
-    family: "didona", sans-serif;
+    family: "didona", "didonaregular", sans-serif;
     size: 75px;
   }
   color: #000;

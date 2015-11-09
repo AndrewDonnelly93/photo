@@ -49,6 +49,18 @@
 }
 
 @font-face {
+  font-family: 'didona';
+  src: url('../fonts/didona/Didona.eot') format('embedded-opentype');
+  src: url("../fonts/didona/Didona.eot");
+  src: url("../fonts/didona/Didona.eot")format("embedded-opentype"),
+  url("../fonts/didona/Didona.woff") format("woff"),
+  url("../fonts/didona/Didona.ttf") format("truetype"),
+  url("../fonts/didona/Didona.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Garamond';
   src: url('../fonts/garamond/Garamond.eot') format('embedded-opentype');
   src: url("../fonts/garamond/Garamond.eot");
