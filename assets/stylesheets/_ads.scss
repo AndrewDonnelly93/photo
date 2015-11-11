@@ -48,23 +48,22 @@
       text-align: left;
       span {
         display: block;
-        padding-left: 25px;
       }
     }
     .block-wrapper {
       width: 1680px;
     }
     .section-description {
+      padding-left: 82px;
+      @include border-box;
       margin: 0;
       float: right;
       .big-header {
         @include border-box;
-        padding-left: 20px;
       }
     }
     .articles {
       @include border-box;
-      padding-left: 82px;
     }
     .gallery {
       margin: 70px 0 0 0;

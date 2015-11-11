@@ -47,6 +47,18 @@ body {
     size: 75px;
   }
   color: #000;
+  position: relative;
+  .letter {
+    position: relative;
+    display: inline !important;
+    padding-left: 0 !important;
+    &:before {
+      position: absolute;
+      top: -45px;
+      content: "..";
+      left: 2px;
+    }
+  }
 }
 
 .about-me {

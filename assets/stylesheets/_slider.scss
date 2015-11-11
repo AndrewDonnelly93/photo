@@ -1,5 +1,5 @@
 $slider-width: 1903px;
-$slider-height: 1080px;
+$slider-height: 1286px;
 $pagination-height: 15px;
 $pagination-width: 15px;
 $logo-w: 454px;
@@ -46,12 +46,11 @@ $slider-wrapper-w: 1560px;
       margin: 0 auto;
       width: $slider-width;
       height: $slider-height;
-      @media (max-width: 1919px) {
-        position: absolute;
-        left: 50%;
-        top: 0;
-        margin-left: -1/2 * $slider-width;
-      }
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-top: -1/2 * $slider-height;
+      margin-left: -1/2 * $slider-width;
     }
   }
   .contacts {
